@@ -1,0 +1,17 @@
+* {
+    font-family: 'Shrikhand', serif;
+}
+
+@media screen and (max-width: 768px) {
+
+    .header {
+        height: 63px;
+
+        &__logo {
+            width: 197px;
+            display: flex;
+            padding-left: 86px;
+            padding-top: 14px;
+        }
+    }
+}
