@@ -1,17 +1,136 @@
 * {
-    font-family: 'Shrikhand', serif;
+    // fonts
+    $main-font: 'Roboto', sans-serif;
+    $logo-font: 'Shrikhand', serif;
+    // colors
+    $main-color: #9356DC;
+    $sec-color: #FF79DA;
+    $third-color: #99e2d0;
+    $background: #F6F6F6;
+    $grey: #353535;
+    $grey-2: #EAEAEA;
+    $grey-3: #7E7E7E;
 }
 
 @media screen and (max-width: 768px) {
 
-    .header {
-        height: 63px;
+    @import url(./modules/header.scss);
 
-        &__logo {
-            width: 197px;
-            display: flex;
-            padding-left: 86px;
-            padding-top: 14px;
+    .search-bar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 17px;
+        background-color: $grey-2;
+        border: none;
+        font: 500 1rem $main-font;
+        text-align: center;
+        box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.13) inset;
+
+        &__icon {
+            display: none;
+            color: $grey;
         }
     }
+
+    .intro {
+        font-family: $main-font;
+        background-color: $background;
+        align-items: center;
+        justify-content: center;
+        margin-top: 39px;
+        margin-bottom: 57px;
+
+        &__title {
+            font: 700 1, 5rem;
+        }
+
+        &__txt {
+            font: 300 1, 125rem;
+        }
+
+        &__button {
+            font: 500 1rem white;
+            background: rgb(131, 58, 180);
+            background: linear-gradient(0deg, $main-color 30%, $sec-color 100%);
+            box-shadow: 0px 11px 13px 6px rgba(0, 0, 0, 0.13);
+        }
+    }
+
+    .fonctionnement {
+        margin-top: 48px;
+        margin-bottom: 68px;
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 26px;
+
+        &__title {
+            font: 700 1, 5rem;
+        }
+
+        &__cards {
+            gap: 25px;
+            position: relative;
+
+            &--num {
+                background-color: $main-color;
+                color: white;
+                border-radius: 100%;
+                position: relative;
+            }
+
+            &--icon {
+                color: $grey-3;
+            }
+
+            &--txt {
+                width: 100%;
+                border-radius: 20px;
+                box-shadow: 0px 11px 30px 27px rgba(0, 0, 0, 0.13);
+            }
+        }
+
+    }
+
+    .restaurants {
+        background-color: $background;
+        display: flex;
+        flex-direction: column;
+
+        &__title {
+            font: 700 1, 5rem;
+            padding-bottom: 20px;
+        }
+
+        &__cards {
+            gap: 18px;
+
+            &--card {
+                background-color: white;
+                border-radius: 20px;
+                box-shadow: 0px 0px 18px 10px rgba(0, 0, 0, 0.13);
+
+                &--img {
+                    height: 174px;
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+            }
+        }
+
+        .card__content {
+            padding-top: 16px;
+            padding-bottom: 16px;
+
+            &--title {
+                font: 700 1, 125rem;
+            }
+
+            &--txt {
+                font: 300 1, 0625rem;
+            }
+        }
+    }
+
+    @import url(./modules/footer.css);
 }

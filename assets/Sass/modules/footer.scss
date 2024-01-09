@@ -1,0 +1,18 @@
+.footer {
+    background-color: $grey;
+    color: white;
+    width: 100%;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    padding-left: 22px;
+    gap: 16px;
+
+    &__logo {
+        font: 400 italic 1,125rem $logo-font;
+    }
+
+    &__links {
+        gap: 7px;
+        font: 400 1rem;
+    }
+}
