@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./assets/styles.css">
+    <link rel="stylesheet" href="./assets/Sass/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +23,7 @@
     </div>
 
     <div class="intro">
-        <h1 class="into__title">Réservze le menu qui vous convient</h1>
+        <h1 class="into__title">Réservez le menu qui vous convient</h1>
         <p class="intro__txt">Découvrez des resaurants d'exeption, sélectionnés par nos soins.</p>
         <button class="intro__button">Explorer nos restaurants</button>
     </div>
@@ -35,13 +32,13 @@
         <h1 class="fontionnement__title">Fonctionnement</h1>
         <div class="fonctionnement__cards">
             <div class="fonctionnement__cards--num">1</div>
-            <div class="fonctionnement__cards--icon"></div>
+            <div class="fonctionnement__cards--icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
             <div class="fonctionnement__cards--txt">Choisissez un restaurant</div>
             <div class="fonctionnement__cards--num">2</div>
-            <div class="fonctionnement__cards--icon"></div>
+            <div class="fonctionnement__cards--icon"><i class="fa-solid fa-list-ul"></i></div>
             <div class="fonctionnement__cards--txt">Composez votre menu</div>
             <div class="fonctionnement__cards--num">3</div>
-            <div class="fonctionnement__cards--icon"></div>
+            <div class="fonctionnement__cards--icon"><i class="fa-solid fa-store"></i></div>
             <div class="fonctionnement__cards--txt">Dégustez au restaurant</div>
         </div>
     </div>
@@ -54,10 +51,13 @@
                     <img class="restaurants__cards--card--img"
                         src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                         alt="photo d'une assiette au restaurant">
-                    <h2 class="restaurants__cards--card--title">La palette du goût</h2>
-                    <p class="restaurants__cards--card--txt">Ménilmontant</p>
-                    <p class="restaurants__cards--card--new">Nouveau</p>
-                    <div class="restaurants__cards--card--fav"><i class="fa-regular fa-heart"></i></div>
+                    <div class="card__content">
+                        <h2 class="card__content--title">La palette du goût</h2>
+                        <p class="card__content--txt">Ménilmontant</p>
+                        <p class="card__content--new">Nouveau</p>
+                        <div class="card__content--fav"><img src="assets/images/icone/like.svg"></div>
+                        <div class="card__content--favd"><img src="assets/images/icone/liked.svg"></div>
+                    </div>
                 </div>
             </a>
 
@@ -69,7 +69,8 @@
                     <h2 class="restaurants__cards--card--title">la note enchantée</h2>
                     <p class="restaurants__cards--card--txt">Charonne</p>
                     <p class="restaurants__cards--card--new">Nouveau</p>
-                    <div class="restaurants__cards--card--fav"><i class="fa-regular fa-heart"></i></div>
+                    <div class="card__content--fav"><img src="assets/images/icone/like.svg"></div>
+                    <div class="card__content--favd"><img src="assets/images/icone/liked.svg"></div>
                 </div>
             </a>
 
@@ -80,7 +81,8 @@
                         alt="photo d'une assiette au restaurant">
                     <h2 class="restaurants__cards--card--title">À la française</h2>
                     <p class="restaurants__cards--card--txt">Cité Rouge</p>
-                    <div class="restaurants__cards--card--fav"><i class="fa-regular fa-heart"></i></div>
+                    <div class="card__content--fav"><img src="assets/images/icone/like.svg"></div>
+                    <div class="card__content--favd"><img src="assets/images/icone/liked.svg"></div>
                 </div>
             </a>
 
@@ -91,7 +93,8 @@
                         alt="photo d'une assiette au restaurant">
                     <h2 class="restaurants__cards--card--title">Le délice des sens</h2>
                     <p class="restaurants__cards--card--txt">Folie-Méricourt</p>
-                    <div class="restaurants__cards--card--fav"><i class="fa-regular fa-heart"></i></div>
+                    <div class="card__content--fav"><img src="assets/images/icone/like.svg"></div>
+                    <div class="card__content--favd"><img src="assets/images/icone/liked.svg"></div>
                 </div>
             </a>
         </div>
