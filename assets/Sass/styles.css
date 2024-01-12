@@ -6,7 +6,15 @@
   color: black;
 }
 
+body {
+  margin: 0px;
+}
+
 @media screen and (max-width: 768px) {
+  @import url(./modules/_header.scss);
+  .search-bar {
+    position: relative;
+  }
   .search-bar input {
     width: 100%;
     height: 50px;
@@ -15,13 +23,19 @@
     gap: 17px;
     background-color: #EAEAEA;
     border: none;
-    font: 500 1.1875rem;
+    font-weight: 500;
+    font-size: 1.1875rem;
     text-align: center;
-    color: black;
+    color: #353535;
     box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.13) inset;
   }
   .search-bar__icon {
     color: #353535;
+    width: 12px;
+    height: 16px;
+    position: absolute;
+    left: 119px;
+    top: 17px;
   }
   .intro {
     width: 100%;
@@ -31,17 +45,20 @@
     padding-bottom: 57px;
   }
   .intro__title {
-    font: 700 1.5rem;
+    font-weight: 700;
+    font-size: 1.5rem;
   }
   .intro__txt {
-    font: 300 1.125rem;
+    font-weight: 300;
+    font-size: 1.125rem;
     margin-bottom: 27px;
   }
   .intro__button {
     height: 50px;
     width: 218px;
     color: white;
-    font: 500 1rem;
+    font-weight: 500;
+    font-size: 1rem;
     background: #9356DC;
     border: none;
     border-radius: 25px;
@@ -53,14 +70,23 @@
     margin-bottom: 68px;
     padding-left: 20px;
     padding-right: 20px;
-    gap: 26px;
   }
   .fonctionnement__title {
-    font: 700 1, 5rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding-bottom: 26px;
+    margin: 0px;
   }
-  .fonctionnement__cards {
-    gap: 25px;
+  .fonctionnement__cards--card {
+    display: flex;
     position: relative;
+    height: 73px;
+    width: 323px;
+    margin-left: 12px;
+    margin-bottom: 17px;
+    border-radius: 20px;
+    background-color: #F6F6F6;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
   }
   .fonctionnement__cards--num {
     display: flex;
@@ -72,15 +98,17 @@
     justify-content: center;
     border-radius: 100%;
     position: absolute;
+    top: 25px;
+    left: -12px;
   }
   .fonctionnement__cards--icon {
     color: #7E7E7E;
   }
   .fonctionnement__cards--txt {
     width: 100%;
-    text-align: center;
-    border-radius: 20px;
-    box-shadow: 0px 11px 30px 27px rgba(0, 0, 0, 0.13);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .restaurants {
     width: 100%;
@@ -90,20 +118,26 @@
     flex-direction: column;
   }
   .restaurants__title {
-    font: 700 1, 5rem;
-    padding-bottom: 20px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding-bottom: 15px;
+    padding-top: 54px;
+    margin: 0px;
   }
   .restaurants__cards {
     gap: 18px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
   .restaurants__cards--card {
     margin-bottom: 18px;
     width: 340px;
-    height: 240px;
+    height: 251px;
     background-color: white;
     border-radius: 20px;
     box-shadow: 0px 0px 18px 10px rgba(0, 0, 0, 0.13);
     position: relative;
+    overflow: hidden;
   }
   .restaurants__cards--card--img {
     height: 174px;
@@ -112,24 +146,48 @@
     box-sizing: border-box;
   }
   .restaurants__cards--card--new {
-    font: 550 0.875rem;
+    font-weight: 500;
+    font-size: 0.875rem;
     color: #008766;
     background-color: #99e2d0;
     width: 80px;
     height: 29px;
     text-align: center;
+    line-height: 30px;
     position: absolute;
     top: 0px;
     right: 15px;
   }
-  .restaurants .card__content {
+  .restaurants__cards--card--title {
+    font-weight: 700;
+    font-size: 1.125rem;
+    margin: 0px;
     padding-top: 16px;
-    padding-bottom: 16px;
+    padding-left: 13px;
   }
-  .restaurants .card__content--title {
-    font: 700 1, 125rem;
+  .restaurants__cards--card--txt {
+    font-weight: 300;
+    font-size: 1.0625rem;
+    margin: 0px;
+    padding-top: 5px;
+    padding-left: 13px;
   }
-  .restaurants .card__content--txt {
-    font: 300 1, 625rem;
+  .restaurants__cards--card--fav {
+    position: absolute;
+    bottom: 33px;
+    right: 25px;
   }
+  .restaurants__cards--card--favd {
+    display: none;
+    position: absolute;
+    bottom: 33px;
+    right: 25px;
+  }
+  .restaurants__cards--card--fav:active {
+    display: none;
+  }
+  .restaurants__cards--card--favd:active {
+    display: unset;
+  }
+  @import url(./modules/_footer.scss);
 }/*# sourceMappingURL=styles.css.map */
