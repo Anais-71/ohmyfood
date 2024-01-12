@@ -23,7 +23,7 @@ body {
 
 @media screen and (max-width: 768px) {
 
-    @import url(./modules/_header.scss);
+    @import './modules/_header.scss';
 
     .search-bar {
         position: relative;
@@ -231,5 +231,5 @@ body {
         }
     }
 
-    @import url(./modules/_footer.scss);
+    @import './modules/_footer.scss';
 }

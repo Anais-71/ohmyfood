@@ -11,7 +11,15 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  @import url(./modules/_header.scss);
+  .header {
+    height: 63px;
+  }
+  .header__logo {
+    width: 197px;
+    display: flex;
+    padding-left: 86px;
+    padding-top: 14px;
+  }
   .search-bar {
     position: relative;
   }
@@ -189,5 +197,29 @@ body {
   .restaurants__cards--card--favd:active {
     display: unset;
   }
-  @import url(./modules/_footer.scss);
+  .footer {
+    background-color: #353535;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    padding-left: 22px;
+    gap: 16px;
+  }
+  .footer__logo {
+    font-weight: 400;
+    font-size: 1.125rem;
+    font-family: "Shrikhand", serif;
+    color: white;
+  }
+  .footer__links {
+    flex-direction: column;
+    gap: 7px;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+  .footer__links a {
+    color: white;
+  }
 }/*# sourceMappingURL=styles.css.map */

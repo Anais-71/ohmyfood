@@ -9,13 +9,17 @@
     gap: 16px;
 
     &__logo {
-        font: 400 1.125rem $logo-font, white;
+        font-weight: 400;
+        font-size: 1.125rem;
+        font-family: $logo-font;
+        color: white;
     }
 
     &__links {
         flex-direction: column;
         gap: 7px;
-        font: 400 1rem;
+        font-weight: 400;
+        font-size: 1rem;
 
         a {
             color: white;
