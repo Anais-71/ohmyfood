@@ -1,0 +1,32 @@
+$main-font: 'Roboto', sans-serif;
+$logo-font: 'Shrikhand', serif;
+$main-color: #9356DC;
+$sec-color: #FF79DA;
+$third-color: #99e2d0;
+$background: #F6F6F6;
+$grey: #353535;
+$grey-2: #EAEAEA;
+$grey-3: #7E7E7E;
+
+* {
+    font-family: $main-font;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+body {
+    margin: 0px;
+}
+
+    @import '../../assets/Sass/modules/header';
+
+.cover img {
+    object-fit: cover;
+    width: 100%;
+    height: 275px;
+}
+
+    @import '../../assets/Sass/modules/footer';
