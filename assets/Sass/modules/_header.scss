@@ -1,10 +1,26 @@
 .header {
     height: 63px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &__nav {
+
+        &--back {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            color: $grey;
+            top: 17px; 
+            left: 17px;
+        }
+    }
 
     &__logo {
-        width: 197px;
         display: flex;
-        padding-left: 86px;
-        padding-top: 14px;
+        margin: 0 auto;
+        width: 197px;
+        justify-content: center;
     }
 }

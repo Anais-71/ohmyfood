@@ -2,27 +2,56 @@
     background-color: $grey;
     display: flex;
     flex-direction: column;
-    width: 100%;
     padding-top: 22px;
     padding-bottom: 22px;
     padding-left: 22px;
     gap: 16px;
 
     &__logo {
-        font-weight: 400;
+        font-weight: 00;
         font-size: 1.125rem;
         font-family: $logo-font;
         color: white;
     }
 
     &__links {
+        display: flex;
         flex-direction: column;
         gap: 7px;
-        font-weight: 400;
+        font-weight: 500;
         font-size: 1rem;
+
+        &--link--sub {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
 
         a {
             color: white;
+            font-weight: 400;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .footer {
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding-right: 67px;
+
+        &__logo {
+            display: flex;
+            justify-content: end;
+        }
+
+        &__links {
+            flex-direction: row;
+
+            &--link--sub {
+                flex-direction: row;
+            }
         }
     }
 }

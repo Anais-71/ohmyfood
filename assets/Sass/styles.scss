@@ -8,6 +8,50 @@ $grey: #353535;
 $grey-2: #EAEAEA;
 $grey-3: #7E7E7E;
 
+@keyframes left-to-right {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes fade-out {
+    to {
+        display: none;
+    }
+}
+
+@keyframes unfav-animation {
+    0% {
+        opacity: 100%;
+    }
+
+    50% {
+        opacity: 50%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes fav-animation {
+    0% {
+        opacity: 0%;
+    }
+
+    50% {
+        opacity: 50%;
+    }
+
+    100% {
+        opacity: 100%; 
+    }
+}
+
 * {
     font-family: $main-font;
 
@@ -21,215 +65,311 @@ body {
     margin: 0px;
 }
 
-@media screen and (max-width: 768px) {
+.overlay {
+    width: 100%;
+    height: 100%;
+    background: white;
+    animation: fade-out 3s forwards;
+}
 
-    @import './modules/_header.scss';
+.loader {
+    left: 50%;
+    overflow-x: hidden;
+    padding-top: 55px;
+    position: absolute;
+    text-align: center;
+    font-family: $logo-font;
+    font-size: 3.125rem;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    animation: fade-out 3s forwards;
 
-    .search-bar {
+    &:before {
+        animation: left-to-right 3s alternate infinite linear;
+        background-image: linear-gradient(193deg, $main-color -11.44%, $sec-color 124%);
+        content: "";
+        height: 15px;
+        border-radius: 20px;
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+}
+
+@import './modules/_header.scss';
+
+.header {
+    &__nav {
+        display: none;
+    }
+}
+
+.search-bar {
+    position: relative;
+
+    input {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        gap: 17px;
+        background-color: $grey-2;
+        border: none;
+        font-weight: 500;
+        font-size: 1rem;
+        text-align: center;
+        color: $grey;
+        box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.13) inset;
+        box-shadow: 0px 4px 4px 0px #00000040;
         position: relative;
+    }
 
-        input {
+    &__icon {
+        position: absolute;
+        left: 17px; 
+        color: $grey;
+        width: 12px;
+        height: 16px;
+    }
+}
+
+.intro {
+    background-color: $background;
+    text-align: center;
+    padding-top: 39px;
+    padding-bottom: 57px;
+
+    &__title {
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    &__txt {
+        font-weight: 300;
+        font-size: 1.125rem;
+        margin-bottom: 27px;
+    }
+
+    &__button {
+        height: 50px;
+        width: 218px;
+        color: white;
+        font-weight: 500;
+        font-size: 1rem;
+        background: $main-color;
+        border: none;
+        border-radius: 25px;
+        background: linear-gradient(193.33deg, $main-color -11.44%, $sec-color 123.93%);
+        box-shadow: 0px 4px 10px 0px #00000040;
+
+        &:hover {
+            background: linear-gradient(193.33deg, $main-color -11.44%, $sec-color 75%);
+            box-shadow: 0px 4px 10px 0px #00000090;
+        }
+    }
+}
+
+.fonctionnement {
+    margin-top: 48px;
+    margin-bottom: 68px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &__title {
+        font-weight: 700;
+        font-size: 1.5rem;
+        padding-bottom: 26px;
+        margin: 0px;
+    }
+
+    &__cards {
+
+        &--card {
+            display: flex;
+            position: relative;
+            height: 73px;
+            width: 98%;
+            margin-left: 12px;
+            margin-bottom: 17px;
+            border-radius: 20px;
+            background-color: $background;
+            box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+        }
+
+        &--num {
+            display: flex;
+            background-color: $main-color;
+            color: white;
+            width: 24px;
+            height: 24px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100%;
+            position: absolute;
+            top: 25px;
+            left: -12px;
+        }
+
+        &--icon {
+            color: $grey-3;
+            position: absolute;
+            top: 27px;
+            left: 36px;
+
+            &--3 {
+                color: $main-color;
+                position: absolute;
+                top: 27px;
+                left: 36px;
+            }
+        }
+
+        &--txt {
             width: 100%;
-            height: 50px;
             display: flex;
             align-items: center;
-            gap: 17px;
-            background-color: $grey-2;
-            border: none;
-            font-weight: 500;
-            font-size: 1.1875rem;
-            text-align: center;
-            color: $grey;
-            box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.13) inset;
-        }
-
-        &__icon {
-            color: $grey;
-            width: 12px;
-            height: 16px;
-            position: absolute;
-            left: 119px;
-            top: 17px;
+            justify-content: center;
         }
     }
 
-    .intro {
-        width: 100%;
-        background-color: $background;
-        text-align: center;
-        padding-top: 39px;
-        padding-bottom: 57px;
+}
 
-        &__title {
-            font-weight: 700;
-            font-size: 1.5rem;
-        }
+.restaurants {
+    padding-left: 20px;
+    background-color: $background;
+    display: flex;
+    flex-direction: column;
 
-        &__txt {
-            font-weight: 300;
-            font-size: 1.125rem;
-            margin-bottom: 27px;
-        }
-
-        &__button {
-            height: 50px;
-            width: 218px;
-            color: white;
-            font-weight: 500;
-            font-size: 1rem;
-            background: $main-color;
-            border: none;
-            border-radius: 25px;
-            background: linear-gradient(0deg, $main-color 30%, $sec-color 100%);
-            box-shadow: 0px 11px 13px 6px rgba(0, 0, 0, 0.13);
-        }
+    &__title {
+        font-weight: 700;
+        font-size: 1.5rem;
+        padding-bottom: 15px;
+        padding-top: 54px;
+        margin: 0px;
     }
 
-    .fonctionnement {
-        margin-top: 48px;
-        margin-bottom: 68px;
-        padding-left: 20px;
-        padding-right: 20px;
+    &__cards {
+        padding-top: 16px;
+        padding-bottom: 16px;
 
-        &__title {
-            font-weight: 700;
-            font-size: 1.5rem;
-            padding-bottom: 26px;
-            margin: 0px;
-        }
+        &--card {
+            margin-bottom: 18px;
+            width: 95%;
+            height: 251px;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0px 0px 18px 10px rgba(0, 0, 0, 0.13);
+            position: relative;
+            overflow: hidden;
 
-        &__cards {
-
-            &--card {
-                display: flex;
-                position: relative;
-                height: 73px;
-                width: 323px;
-                margin-left: 12px;
-                margin-bottom: 17px;
-                border-radius: 20px;
-                background-color: $background;
-                box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+            &--img {
+                height: 174px;
+                width: 100%;
+                object-fit: cover;
+                box-sizing: border-box;
             }
 
-            &--num {
-                display: flex;
-                background-color: $main-color;
-                color: white;
-                width: 24px;
-                height: 24px;
-                align-items: center;
-                justify-content: center;
-                border-radius: 100%;
+            &--new {
+                font-weight: 500;
+                font-size: 0.875rem;
+                color: #008766;
+                background-color: $third-color;
+                width: 80px;
+                height: 29px;
+                text-align: center;
+                line-height: 30px;
                 position: absolute;
-                top: 25px;
-                left: -12px;
+                top: 0px;
+                right: 15px;
             }
 
-            &--icon {
-                color: $grey-3;
+            &--title {
+                font-weight: 700;
+                font-size: 1.125rem;
+                margin: 0px;
+                padding-top: 16px;
+                padding-left: 13px;
             }
 
             &--txt {
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                font-weight: 300;
+                font-size: 1.0625rem;
+                margin: 0px;
+                padding-top: 5px;
+                padding-left: 13px;
+            }
+
+            &--fav {
+                display: none;
+            }
+
+            &--fav+label {
+                display: inline-block;
+                position: absolute;
+                bottom: 32px;
+                right: 19px;
+                width: 22px;
+                height: 21px;
+                background: url('../images/icone/like.svg') no-repeat;
+                background-size: 100% 100%;
+                cursor: pointer;
+                transition: background-color 400ms ease;
+            }
+
+            &--fav:checked+label {
+                background: url('../images/icone/liked.svg') no-repeat;
+                background-size: 100% 100%;
+                animation: fav-animation 400ms ease;
+            }
+
+            &--fav:not(:checked)+label {
+                background: url('../images/icone/like.svg') no-repeat;
+                background-size: 100% 100%;
+                animation: unfav-animation 400ms ease;
             }
         }
 
+
+    }
+}
+
+@media screen and (min-width: 769px) {
+
+    .fonctionnement {
+        padding-left: 13%;
+        padding-right: 13%;
+
+        &__cards {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+        }
     }
 
     .restaurants {
-        width: 100%;
-        padding-left: 20px;
-        background-color: $background;
-        display: flex;
-        flex-direction: column;
+        padding-left: 13%;
+        padding-right: 13%;
 
-        &__title {
-            font-weight: 700;
-            font-size: 1.5rem;
-            padding-bottom: 15px;
-            padding-top: 54px;
-            margin: 0px;
-        }
 
         &__cards {
-            gap: 18px;
-            padding-top: 16px;
-            padding-bottom: 16px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
 
             &--card {
-                margin-bottom: 18px;
-                width: 340px;
+                width: 490px;
                 height: 251px;
-                background-color: white;
-                border-radius: 20px;
-                box-shadow: 0px 0px 18px 10px rgba(0, 0, 0, 0.13);
-                position: relative;
-                overflow: hidden;
-
-                &--img {
-                    height: 174px;
-                    width: 100%;
-                    object-fit: cover;
-                    box-sizing: border-box;
-                }
-
-                &--new {
-                    font-weight: 500;
-                    font-size: 0.875rem;
-                    color: #008766;
-                    background-color: $third-color;
-                    width: 80px;
-                    height: 29px;
-                    text-align: center;
-                    line-height: 30px;
-                    position: absolute;
-                    top: 0px;
-                    right: 15px;
-                }
-
-                &--title {
-                    font-weight: 700;
-                    font-size: 1.125rem;
-                    margin: 0px;
-                    padding-top: 16px;
-                    padding-left: 13px;
-                }
-
-                &--txt {
-                    font-weight: 300;
-                    font-size: 1.0625rem;
-                    margin: 0px;
-                    padding-top: 5px; 
-                    padding-left: 13px;
-                }
-
-                &--fav {
-                    position: absolute;
-                    bottom: 33px;
-                    right: 25px;
-                }
-
-                &--favd {
-                    display: none;
-                    position: absolute;
-                    bottom: 33px;
-                    right: 25px;
-                }
-
-                &--fav:active {
-                    display: none;
-                }
-
-                &--favd:active {
-                    display: unset;
-                }
             }
         }
     }
-
-    @import './modules/_footer.scss';
 }
+
+
+
+@import './modules/_footer.scss';
