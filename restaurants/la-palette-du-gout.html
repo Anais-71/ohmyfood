@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-..." crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./sass/restaurant.scss">
+    <link href="./sass/restaurant.scss" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +22,24 @@
     </header>
 
     <main>
- <img class="cover" src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo d'une table de restaurant">
+        <img class="cover" src="../assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+            alt="photo d'une table de restaurant">
+        <div class="menu">
+            <div class="restaurant">La palette du goût
+                <input type="checkbox" name="fav" id="fav" class="restaurants__fav"><label for="fav"></label>
+            </div>
+            <div class="menu__course">
+                <div class="menu__title">ENTREES</div>
+                <div class="menu__card">
+                    <div class="menu__card--title">Fricassée d'escargots</div>
+                    <div class="menu__card--content">
+                        <div class="menu__card--content--subtitle">Au piment d'Espelette</div>
+                        <div class="menu__card--content--price">25€</div>
+                    </div>
+                </div>
+            </div>
+            <button class="menu__btn">Commander</button> 
+        </div>
     </main>
 
     <footer class="footer">
