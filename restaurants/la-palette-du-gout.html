@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-..." crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/3dd7fc5378.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
-    <link href="./sass/restaurant.scss" rel="stylesheet">
+    <link rel="stylesheet" href="sass/restaurant.css">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,8 +16,12 @@
 
 <body>
     <header class="header">
-        <i class="fa-solid fa-arrow-left"></i>
-        <img class="header__logo" src="./assets/images/logo/ohmyfood.png" alt="logo ohmyfood">
+        <nav class="header__nav">
+            <a href="../index.html" class="header__nav--back">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+        </nav>
+        <img class="header__logo" src="../assets/images/logo/ohmyfood.png" alt="logo ohmyfood">
     </header>
 
     <main>
@@ -26,10 +29,12 @@
             alt="photo d'une table de restaurant">
         <div class="menu">
             <div class="restaurant">La palette du goût
-                <input type="checkbox" name="fav" id="fav" class="restaurants__fav"><label for="fav"></label>
+                <input type="checkbox" name="fav" id="fav" class="restaurant__fav"><label for="fav"></label>
             </div>
             <div class="menu__course">
-                <div class="menu__title">ENTREES</div>
+                <div class="menu__course--title">ENTREES</div>
+                <div class="menu__course--div"></div>
+
                 <div class="menu__card">
                     <div class="menu__card--title">Fricassée d'escargots</div>
                     <div class="menu__card--content">
@@ -37,8 +42,74 @@
                         <div class="menu__card--content--price">25€</div>
                     </div>
                 </div>
+                <div class="menu__card">
+                    <div class="menu__card--title">Foie gras de canard mi-cuit</div>
+                    <div class="menu__card--content">
+                        <div class="menu__card--content--subtitle">Et ses copeaux de truffe noire</div>
+                        <div class="menu__card--content--price">35€</div>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <div class="menu__card--title">Œuf au plat</div>
+                    <div class="menu__card--content">
+                        <div class="menu__card--content--subtitle">Assaisonné à la truffe sur lit de caviar</div>
+                        <div class="menu__card--content--price">20€</div>
+                    </div>
+                </div>
             </div>
-            <button class="menu__btn">Commander</button> 
+            <div class="menu__course">
+                <div class="menu__course--title">PLATS</div>
+                <div class="menu__course--div"></div>
+                <div class="menu__card">
+                    <div class="menu__card--title">Filet de bœuf aux herbes</div>
+                    <div class="menu__card--content">
+                        <div class="menu__card--content--subtitle">Accompagné de sa ribambelle de légumes</div>
+                        <div class="menu__card--content--price">40€</div>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <div class="menu__card--title">Parmentier de queue de bœuf</div>
+                    <div class="menu__card--content">
+                        <div class="menu__card--content--subtitle">À la truffe noire sur sa purée de panais</div>
+                        <div class="menu__card--content--price">35€</div>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <div class="menu__card--title">Filet de turbot</div>
+                    <div class="menu__card--content">
+                        <div class="menu__card--content--subtitle">Aux agrumes</div>
+                        <div class="menu__card--content--price">44€</div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu__course">
+                <div class="menu__course--title">DESSERTS</div>
+                <div class="menu__course--div"></div>
+                <div class="menu__card">
+                    <div class="menu__card--title">Paris-Brest</div>
+                    <div class="menu__card--content">
+                        <div class="menu__card--content--subtitle">Revisité</div>
+                        <div class="menu__card--content--price">18€</div>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <div class="menu__card--title">Macaron au chocolat d'exception </div>
+                    <div class="menu__card--content">
+                        <div class="menu__card--content--subtitle">Et glace à la vanille de Madagascar</div>
+                        <div class="menu__card--content--price">22€</div>
+                    </div>
+                </div>
+                <div class="menu__card">
+                    <div class="menu__card--title">Mousse au chocolat</div>
+                    <div class="menu__card--content">
+                        <div class="menu__card--content--subtitle">Au piment d'Espelette et à la truffe noire</div>
+                        <div class="menu__card--content--price">23€</div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu__commande">
+                <button class="menu__commande--btn">Commander</button>
+            </div>
         </div>
     </main>
 
