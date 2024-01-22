@@ -100,8 +100,6 @@ body {
         padding-left: 15px;
         box-shadow: 0px 4.011494159698486px 15.043103218078613px 0px #0000001A;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
         align-items: center;
         overflow: hidden;
         opacity: 0;
@@ -114,18 +112,21 @@ body {
         }
 
         &--content {
-            
+            width: 287px;
             &--title {
                 font-weight: 500;
                 font-size: 1.125rem;
-                overflow: hidden;
                 padding-bottom: 5px;
+                overflow: hidden;
                 white-space: nowrap;
                 text-overflow: ellipsis;
             }
 
             &--subtitle {
                 font-size: 0.938rem;
+                overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
             }
         }
 
@@ -133,15 +134,17 @@ body {
             display: flex;
             align-items: flex-end;
             overflow: hidden;
-            justify-content: flex-end;
+            position: absolute;
+            right: 0px;
             transform: translateX(59px);
             transition: transform 200ms linear;
 
             &--price {
                 font-weight: 700;
                 font-size: 0.938rem;
-                margin-right: 15px;
+                right: 15px;
                 margin-bottom: 13.5px;
+                margin-right: 13.5px;
             }
 
             &--check {
@@ -162,13 +165,17 @@ body {
             }
         }
     }
-    &__card:active .menu__card--choice {
-        transform: translateX(-0px);
-    }
-
+    &__card:active .menu__card--choice,
     &__card:hover .menu__card--choice {
         transform: translateX(-0px);
     }
+
+    &__card:active .menu__card--content,
+    &__card:hover .menu__card--content {
+        width: calc(100% - 59px);
+    }
+    
+      
 
     &__commande {
         display: flex;
