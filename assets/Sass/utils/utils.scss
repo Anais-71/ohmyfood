@@ -1,0 +1,50 @@
+$main-font: 'Roboto', sans-serif;
+$logo-font: 'Shrikhand', serif;
+$main-color: #9356DC;
+$sec-color: #FF79DA;
+$third-color: #99e2d0;
+$background: #F6F6F6;
+$grey: #353535;
+$grey-2: #EAEAEA;
+$grey-3: #7E7E7E;
+
+$menu-animation-delay: 200ms;
+$num-cards: 5;
+
+@keyframes fav-animation {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0%;
+        transform: translateY(200%);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateY(0px)
+    }
+}
+
+@keyframes left-to-right {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes fade-out {
+    to {
+        display: none;
+    }
+}
