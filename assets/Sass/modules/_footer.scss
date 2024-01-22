@@ -8,7 +8,7 @@
     gap: 16px;
 
     &__logo {
-        font-weight: 00;
+        font-weight: 400;
         font-size: 1.125rem;
         font-family: $logo-font;
         color: white;
@@ -23,13 +23,13 @@
 
         &--link--sub {
             display: flex;
+            font-weight: 200;
             flex-direction: column;
             gap: 7px;
         }
 
         a {
             color: white;
-            font-weight: 400;
         }
     }
 }
