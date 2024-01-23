@@ -48,16 +48,16 @@ body {
   padding: 0 17px;
   height: 63px;
   position: relative;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
 }
 .header__nav--back {
   position: absolute;
   width: 30px;
   height: 30px;
   color: #353535;
-  top: 17px;
   left: 17px;
-  display: flex;
-  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .header__logo {
   display: flex;
@@ -172,26 +172,24 @@ body {
   animation-delay: 1000ms;
 }
 .menu .menu__card--content {
-  width: 287px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu .menu__card--content--title {
   font-weight: 500;
   font-size: 1.125rem;
   padding-bottom: 5px;
-  overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
 }
 .menu .menu__card--content--subtitle {
   font-size: 0.938rem;
-  overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
 }
 .menu .menu__card--choice {
   display: flex;
   align-items: flex-end;
-  overflow: hidden;
   position: absolute;
   right: 0px;
   transform: translateX(59px);
@@ -219,11 +217,13 @@ body {
   color: white;
   width: 20px;
 }
-.menu__card:active .menu__card--choice, .menu__card:hover .menu__card--choice {
-  transform: translateX(0px);
+.menu .menu__card:active .menu__card--content,
+.menu .menu__card:hover .menu__card--content {
+  width: calc(100% - 110px);
 }
-.menu__card:active .menu__card--content, .menu__card:hover .menu__card--content {
-  width: calc(100% - 59px);
+.menu .menu__card:active .menu__card--choice,
+.menu .menu__card:hover .menu__card--choice {
+  transform: translateX(0);
 }
 .menu__commande {
   display: flex;
@@ -240,10 +240,12 @@ body {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   margin-bottom: 40px;
+  opacity: 1;
+  transition: opacity 400ms, box-shadow 300ms;
 }
 .menu__commande--btn:hover {
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 75%);
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5647058824);
+  opacity: 0.85;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.3490196078);
 }
 
 .footer {
@@ -316,8 +318,8 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    margin-left: 13%;
-    margin-right: 13%;
+    margin-left: auto;
+    margin-right: auto;
   }
   .menu__course {
     justify-content: center;

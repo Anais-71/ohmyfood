@@ -5,6 +5,8 @@
     padding: 0 17px;
     height: 63px;
     position: relative;
+    box-shadow: 0px 2px 4px 0px #00000026;
+
 
     &__nav {
 
@@ -13,10 +15,9 @@
             width: 30px;
             height: 30px;
             color: $grey;
-            top: 17px;
             left: 17px;
-            display: flex;
-            align-items: center;
+            margin-top: auto;
+            margin-bottom: auto;
         }
     }
 

@@ -112,28 +112,27 @@ body {
         }
 
         &--content {
-            width: 287px;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            
             &--title {
                 font-weight: 500;
                 font-size: 1.125rem;
                 padding-bottom: 5px;
-                overflow: hidden;
-                white-space: nowrap;
                 text-overflow: ellipsis;
             }
 
             &--subtitle {
                 font-size: 0.938rem;
-                overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+                text-overflow: ellipsis;
             }
         }
 
         &--choice {
             display: flex;
             align-items: flex-end;
-            overflow: hidden;
             position: absolute;
             right: 0px;
             transform: translateX(59px);
@@ -165,16 +164,16 @@ body {
             }
         }
     }
-    &__card:active .menu__card--choice,
-    &__card:hover .menu__card--choice {
-        transform: translateX(-0px);
+
+    .menu__card:active .menu__card--content,
+    .menu__card:hover .menu__card--content {
+      width: calc(100% - 110px);
     }
 
-    &__card:active .menu__card--content,
-    &__card:hover .menu__card--content {
-        width: calc(100% - 59px);
+    .menu__card:active .menu__card--choice,
+    .menu__card:hover .menu__card--choice {
+      transform: translateX(0);
     }
-    
       
 
     &__commande {
@@ -192,11 +191,13 @@ body {
             background: linear-gradient(193.33deg, $main-color -11.44%, $sec-color 123.93%);
             box-shadow: 0px 4px 10px 0px #00000040;
             margin-bottom: 40px;
-
-            &:hover {
-                background: linear-gradient(193.33deg, $main-color -11.44%, $sec-color 75%);
-                box-shadow: 0px 4px 10px 0px #00000090;
-            }
+            opacity: 1;
+            transition: opacity 400ms, box-shadow 300ms;
+        }
+    
+        &--btn:hover {
+            opacity: 0.85;
+            box-shadow: 0px 4px 15px 0px #00000059;
         }
     }
 }
@@ -221,8 +222,8 @@ body {
         flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
-        margin-left: 13%;
-        margin-right: 13%;
+        margin-left: auto;
+        margin-right: auto;
 
         &__course {
             justify-content: center;

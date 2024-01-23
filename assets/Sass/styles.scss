@@ -17,7 +17,6 @@ body {
     width: 100%;
     height: 100%;
     background: white;
-    opacity: 100%;
     animation: fade-out 3s forwards;
 }
 
@@ -58,9 +57,11 @@ body {
 }
 
 .search-bar {
+    display: flex;
+    justify-content: center;
     background-color: $grey-2;
-    box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.13) inset;
     box-shadow: 0px 4px 4px 0px #00000040;
+
 
     input {
         flex: 1;
@@ -70,13 +71,17 @@ body {
         font-size: 1rem;
         background-color: $grey-2;
         text-align: center;
+        position: relative;
     }
 
     &__icon {
         color: $grey;
-        margin-left: 114px;
+        position: absolute;
+        left: 100px;
+        top: 80px;
         width: 12px;
         height: 16px;
+        z-index: 2;
     }
 }
 
@@ -99,6 +104,11 @@ body {
     }
 
     &__button {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        align-items: center;
         height: 50px;
         width: 218px;
         color: white;
@@ -108,12 +118,16 @@ body {
         border-radius: 25px;
         background: linear-gradient(193.33deg, $main-color -11.44%, $sec-color 123.93%);
         box-shadow: 0px 4px 10px 0px #00000040;
-
-        &:hover {
-            background: linear-gradient(193.33deg, $main-color -11.44%, $sec-color 75%);
-            box-shadow: 0px 4px 10px 0px #00000090;
-        }
+        opacity: 1;
+        transition: opacity 400ms, box-shadow 300ms;
     }
+
+    &__button:hover {
+        opacity: 0.85;
+        box-shadow: 0px 4px 15px 0px #00000059;
+    }
+
+
 }
 
 .fonctionnement {
@@ -278,6 +292,14 @@ body {
 
 @media screen and (min-width: 769px) {
 
+    .search-bar {
+
+        &__icon {
+            left: 651px;
+            top: 113px;
+        }
+    }
+
     .fonctionnement {
         padding-left: 13%;
         padding-right: 13%;
@@ -302,7 +324,7 @@ body {
             flex-wrap: wrap;
 
             &--card {
-                width: 490px;
+                width: 45%;
                 height: 251px;
             }
         }
