@@ -173,18 +173,19 @@ body {
 }
 .menu .menu__card--content {
   width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .menu .menu__card--content--title {
   font-weight: 500;
   font-size: 1.125rem;
   padding-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 .menu .menu__card--content--subtitle {
   font-size: 0.938rem;
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 .menu .menu__card--choice {

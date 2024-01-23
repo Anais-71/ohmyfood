@@ -113,19 +113,20 @@ body {
 
         &--content {
             width: 100%;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            
+
             &--title {
                 font-weight: 500;
                 font-size: 1.125rem;
                 padding-bottom: 5px;
+                white-space: nowrap;
+                overflow: hidden;
                 text-overflow: ellipsis;
             }
 
             &--subtitle {
                 font-size: 0.938rem;
+                white-space: nowrap;
+                overflow: hidden;
                 text-overflow: ellipsis;
             }
         }
@@ -167,14 +168,14 @@ body {
 
     .menu__card:active .menu__card--content,
     .menu__card:hover .menu__card--content {
-      width: calc(100% - 110px);
+        width: calc(100% - 110px);
     }
 
     .menu__card:active .menu__card--choice,
     .menu__card:hover .menu__card--choice {
-      transform: translateX(0);
+        transform: translateX(0);
     }
-      
+
 
     &__commande {
         display: flex;
@@ -194,7 +195,7 @@ body {
             opacity: 1;
             transition: opacity 400ms, box-shadow 300ms;
         }
-    
+
         &--btn:hover {
             opacity: 0.85;
             box-shadow: 0px 4px 15px 0px #00000059;
