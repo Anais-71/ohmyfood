@@ -25,8 +25,13 @@
   }
 }
 @keyframes fade-out {
-  to {
-    display: none;
+  0%, 99% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 .header {
