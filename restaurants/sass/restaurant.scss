@@ -1,4 +1,6 @@
 @import '../../assets/Sass/utils/utils.scss';
+@import '../../assets/Sass/modules/header';
+@import '../../assets/Sass/modules/footer';
 
 * {
     font-family: $main-font;
@@ -12,8 +14,6 @@
 body {
     margin: 0px;
 }
-
-@import '../../assets/Sass/modules/header';
 
 .cover {
     object-fit: cover;
@@ -38,7 +38,7 @@ body {
         right: 41px;
         width: 22px;
         height: 21px;
-        background: url('../../assets/images/icone/like.svg') no-repeat;
+        background: url('../../assets/images/icone/like.png') no-repeat;
         background-size: 100% 100%;
         cursor: pointer;
     }
@@ -202,8 +202,6 @@ body {
         }
     }
 }
-
-@import '../../assets/Sass/modules/footer';
 
 @media screen and (min-width: 769px) {
 
