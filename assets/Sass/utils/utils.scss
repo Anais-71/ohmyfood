@@ -8,10 +8,20 @@ $grey: #353535;
 $grey-2: #EAEAEA;
 $grey-3: #7E7E7E;
 
-$menu-animation-delay: 200ms;
-$num-cards: 5;
+$num-cards: 4;
+$delay-step: 100ms;
 
 @keyframes fav-animation {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@-moz-keyframes fav-animation {
     0% {
         opacity: 0%;
     }
@@ -33,7 +43,29 @@ $num-cards: 5;
     }
 }
 
+@-moz-keyframes appear {
+    0% {
+        opacity: 0%;
+        transform: translateY(200%);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateY(0px)
+    }
+}
+
 @keyframes left-to-right {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@-moz-keyframes left-to-right {
     0% {
         transform: translateX(-100%);
     }

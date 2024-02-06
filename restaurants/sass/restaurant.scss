@@ -77,6 +77,8 @@ body {
 
         &--title {
             font-size: 1rem;
+            font-weight: 300;
+            margin: 0px;
         }
 
         &--div {
@@ -105,9 +107,9 @@ body {
         opacity: 0;
         animation: appear 900ms linear forwards;
 
-        @for $i from 1 through $num-cards {
+        @for $i from 6 through $num-cards {
             &:nth-child(#{$i}) {
-                animation-delay: $menu-animation-delay * $i;
+                animation-delay: $delay-step * $i;
             }
         }
 
@@ -234,5 +236,16 @@ body {
         }
     }
 
+    @media (max-width: 768px) and (pointer: coarse) {
+        .restaurant__fav:active {
+            background: url('../../assets/images/icone/liked.svg') no-repeat;
+            background-size: 100% 100%;
+            opacity: 1;
+        }
+
+        .menu__card--choice:active {
+            transform: translateX(0);
+        }
+    }
 
 }
