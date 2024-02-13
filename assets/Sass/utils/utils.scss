@@ -21,29 +21,8 @@ $delay-step: 100ms;
     }
 }
 
-@-moz-keyframes fav-animation {
-    0% {
-        opacity: 0%;
-    }
-
-    100% {
-        opacity: 100%;
-    }
-}
 
 @keyframes appear {
-    0% {
-        opacity: 0%;
-        transform: translateY(200%);
-    }
-
-    100% {
-        opacity: 100%;
-        transform: translateY(0px)
-    }
-}
-
-@-moz-keyframes appear {
     0% {
         opacity: 0%;
         transform: translateY(200%);
